@@ -29,11 +29,11 @@ public final class Prefs {
     }
 
     public static String cloudName(Context c) {
-        return sp(c).getString("cloud_name", "");
+        return sp(c).getString("cloud_name", "rvipvegh");
     }
 
     public static String uploadPreset(Context c) {
-        return sp(c).getString("upload_preset", "");
+        return sp(c).getString("upload_preset", "fg2o9q17");
     }
 
     public static void setCloud(Context c, String cloud, String preset) {
