@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#6A35EE</color>
+    <color name="primary_dark">#4F1FD1</color>
+    <color name="primary_light">#EFE9FF</color>
+    <color name="text_primary">#15122B</color>
+    <color name="text_secondary">#6E6A85</color>
+    <color name="stroke">#ECE8F8</color>
+    <color name="nav_inactive">#8E8AA3</color>
+    <color name="pink_accent">#E8348F</color>
+    <color name="gold">#E7A400</color>
+    <color name="gold_soft">#FFF1CC</color>
+    <color name="danger">#E5484D</color>
+    <color name="success">#22A559</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="scrim">#99000000</color>
+</resources>

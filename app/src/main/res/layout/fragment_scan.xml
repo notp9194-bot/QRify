@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/btn_flash"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_circle_dim"
+        android:padding="11dp"
+        android:src="@drawable/ic_flash"
+        android:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/btn_gallery"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_circle_dim"
+        android:padding="11dp"
+        android:src="@drawable/ic_image"
+        android:tint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_hint_pill"
+            android:paddingStart="18dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="8dp"
+            android:text="Align QR Code in Frame"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/frame"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_scan_frame" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/perm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_camera"
+            android:tint="@color/primary" />
+
+        <TextView
+            style="@style/TxtBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="Camera permission is needed to scan QR codes."
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/btn_grant"
+            style="@style/BtnPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="Allow Camera" />
+
+        <TextView
+            android:id="@+id/btn_gallery_alt"
+            style="@style/BtnSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:text="Scan From Gallery" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_sheet"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_check_circle"
+                android:tint="@color/primary" />
+
+            <TextView
+                style="@style/TxtH2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="QR Detected!" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sheet_sub"
+            style="@style/TxtBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Opening Media..."
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/primary" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            style="@style/BtnSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Cancel" />
+    </LinearLayout>
+</FrameLayout>
